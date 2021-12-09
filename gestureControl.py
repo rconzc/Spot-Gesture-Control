@@ -18,7 +18,7 @@ def main():
     vid = cv.VideoCapture(0)
     while True:
         _, frame = vid.read()
-        x, y, x = frame.shape
+        x, y, z = frame.shape
         frame = cv.flip(frame, 1)
         frameColored = cv.cvtColor(frame, cv.COLOR_BGR2RGB)
         gesturePrediction = hands.process(frameColored)
